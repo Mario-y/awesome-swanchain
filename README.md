@@ -24,6 +24,7 @@ Join our [Discord](https://discord.com/invite/swanchain) if you have questions o
 - [MusicGen](musicGen)
 - [Text to Speach](TTS)
 - [ComfyUI](comfyui)
+- [MoneroOcean GPU with XMR payout](xmrig-moneroocean-c11)
 
 
 ### Game - CPU
