@@ -16,7 +16,8 @@ Join our [Discord](https://discord.com/invite/swanchain) if you have questions o
 
 ### AI - CPU
 
-
+### Databases and Administration
+- [MySQL](MySQL)
 
 ### AI - GPU
 
