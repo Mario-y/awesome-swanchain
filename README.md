@@ -50,3 +50,10 @@ Join our [Discord](https://discord.com/invite/swanchain) if you have questions o
 ### Hosting
 
 - [Caddy](caddy)
+
+
+### DeFi
+
+Awesome DeFi apps you can deploy on Akash
+
+- [Augur](augur)
