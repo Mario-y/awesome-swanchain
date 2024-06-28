@@ -1,32 +1,32 @@
 version: "2.0"
 
 services:
-  mysql:
-    image: mysql 
+  web:
+    image: dperson/torproxy
     expose:
-      - port: 3306 
+      - port: 9050
+        as: 9050
+        proto: tcp
         to:
           - global: true
-      - port: 8080
-        as: 80
+      - port: 8118
+        as: 8118
+        proto: tcp
         to:
           - global: true
-    env:
-      - "MYSQL_ROOT_PASSWORD=my-secret-password"
-      - "MYSQL_DATABASE=mydb"
-
 profiles:
   compute:
-    mysql:
+    web:
       resources:
         cpu:
-          units: 2.0
+          units: 0.5
         memory:
           size: 512Mi
         storage:
           size: 512Mi
+
   placement:
-    akash:
+    dcloud:
       attributes:
         host: akash
       signedBy:
@@ -34,11 +34,12 @@ profiles:
           - "akash1365yvmc4s7awdyj3n2sav7xfx76adc6dnmlx63"
           - "akash18qa2a2ltfyvkyj0ggj3hkvuj6twzyumuaru9s4"
       pricing:
-        mysql: 
+        web:
           denom: uakt
-          amount: 10000
+          amount: 1000
+
 deployment:
-  mysql:
-    akash:
-      profile: mysql
-      count: 1 
+  web:
+    dcloud:
+      profile: web
+      count: 1
